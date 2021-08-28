@@ -23,7 +23,7 @@ const displayCountries = (countries) => {
 	}
 };
 
-const getUserCountry = () => {
+const getUserInputCountry = () => {
 	const inputField = document.getElementById('user-country');
 	getSpecificCountry(inputField.value.toLowerCase());
 	inputField.value = '';
