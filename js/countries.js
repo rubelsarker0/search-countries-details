@@ -30,11 +30,14 @@ const getUserCountry = () => {
 };
 
 const getSpecificCountry = async (name) => {
-	const url = `https://restcountries.eu/rest/v2/name/${name}`;
-	const response = await fetch(url);
-	const data = await response.json();
-	displaySpecificCountry(data[0]);
-	// console.log(data[0]);
+	try {
+		const url = `https://restcountries.eu/rest/v2/name/${name}`;
+		const response = await fetch(url);
+		const data = await response.json();
+		displaySpecificCountry(data[0]);
+	} catch (error) {
+		console.log(error);
+	}
 };
 
 const displaySpecificCountry = (country) => {
@@ -44,8 +47,6 @@ const displaySpecificCountry = (country) => {
 	div.className = 'card mb-2';
 	div.innerHTML = generateHTML(country);
 	displayCountry.appendChild(div);
-
-	console.log(country);
 };
 
 const generateHTML = (country) => {
