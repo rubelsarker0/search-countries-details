@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/countries.css">
+    <title>Countries</title>
+</head>
+
+<body class="bg-dark">
+
+    <main>
+        <div class="container">
+
+            <section class="py-5">
+                <div class="input-group mb-3 w-50 mx-auto">
+                    <input id="user-country" type="text" class="form-control" placeholder="Search Countries"
+                        aria-label="Search Countries" aria-describedby="button-addon2">
+                    <button onclick="getUserCountry()" class="btn btn-info" type="button"
+                        id="search-country">Search</button>
+                </div>
+            </section>
+            <section class="py-3 w-50 mx-auto">
+                <div id="display-country" class="text-black">
+                </div>
+            </section>
+            <section>
+                <div id="display-all-countries" class="row row-cols-1 row-cols-md-3 text-black">
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS  -->
+    <script src="js/countries.js"></script>
+</body>
+
+</html>
